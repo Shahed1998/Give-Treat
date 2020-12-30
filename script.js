@@ -6,9 +6,11 @@ document.querySelector('#check').addEventListener('click', function () {
 // complete the dynamically built form
 document.querySelector('#click').addEventListener('click', function () {
   const num = Number(document.querySelector('#Num').value);
-  const arr = [];
+  let playerNames = document.querySelector('#playerNames');
+  playerNames.innerHTML = '';
   for (let i = 0; i < num; i++) {
-    arr.push(i + 1);
+    playerNames.innerHTML += `<br><input type = "text" placeholder="player Number ${
+      i + 1
+    }" name="form${i + 1}" id="form${i + 1}" /><br>`;
   }
-  document.querySelector('#playerNames').textContent = arr;
 });
