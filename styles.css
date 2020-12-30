@@ -4,8 +4,72 @@
   box-sizing: border-box;
   text-align: center;
   color: #000;
+  font-size: 105%;
+}
+
+body {
+  /* background-color: #000; */
+  width: 90%;
+  margin: 0 auto;
 }
 
 .hidden {
   display: none;
+}
+
+.resetBtn {
+  margin-top: 2rem;
+  padding: 20px;
+  width: 100%;
+  border-radius: 30% 30% 0 0;
+  background-color: #e6b566;
+  color: #000;
+  border: #000 solid 2px;
+}
+
+.resetBtn:hover {
+  background-color: #f9e0ae;
+}
+
+#navigation {
+  background-color: #adce74;
+  border-right: #000 2px solid;
+  border-left: #000 2px solid;
+}
+
+#navigation h1 {
+  padding: 20px 0 20px;
+}
+
+#check {
+  width: 100%;
+  padding: 20px;
+  background-color: #c05555;
+  border: #000 solid 2px;
+}
+
+#check:hover {
+  background-color: #ec5858;
+}
+
+#form-fill {
+  background-color: #ffd66b;
+  padding-top: 20px;
+  border-right: #000 solid 2px;
+  border-left: #000 solid 2px;
+}
+
+#click {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #e8e9a1;
+}
+
+#playerNames {
+  background-color: #a07676;
+  padding: 20px;
+}
+
+.inputColor {
+  background-color: #fff;
 }

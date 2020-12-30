@@ -7,11 +7,14 @@ document.querySelector('#click').addEventListener('click', function () {
   let playerNames = document.querySelector('#playerNames');
   const num = Number(document.querySelector('#Num').value);
 
+  document.querySelector('#click').textContent = 'Clicked 🤩';
+  document.querySelector('#playerNames').classList.remove('hidden');
+
   playerNames.innerHTML = '';
   for (let i = 0; i < num; i++) {
     playerNames.innerHTML += `<br><input type = "text" placeholder="Name of player Number ${
       i + 1
-    }" name="form${i + 1}" id="form${i + 1}" /><br>`;
+    }" name="form${i + 1}" id="form${i + 1}" class="inputColor"/><br>`;
   }
   document.querySelector('#submitNames').classList.remove('hidden');
 
