@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Fun Restaurant</title>
   </head>
   <body>
@@ -13,16 +14,16 @@
     </section>
     <section id="question">
       <h2>Want to play a game ?</h2>
-      <button>Yes</button>
+      <button id="check">Yes</button>
       <hr />
     </section>
 
     <!-- Complete the form submission -->
-    <section id="form-fill">
+    <section id="form-fill" class="hidden">
       <form id="form">
         <label for="members">How many members do you have ?</label>
         <input type="number" min="2" class="totalMembers" />
-        <button type="submit" class="submitButton">Submit me</button>
+        <button type="submit" class="submit">Submit me</button>
       </form>
     </section>
     <script src="script.js"></script>
