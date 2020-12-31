@@ -12,9 +12,9 @@ document.querySelector('#click').addEventListener('click', function () {
 
   playerNames.innerHTML = '';
   for (let i = 0; i < num; i++) {
-    playerNames.innerHTML += `<br><input type = "text" placeholder="Name of player Number ${
+    playerNames.innerHTML += `<br><input type = "text" placeholder="player Number ${
       i + 1
-    }" name="form${i + 1}" id="form${i + 1}" class="inputColor"/><br>`;
+    }" name="form${i + 1}" id="form${i + 1}" class="form"/><br>`;
   }
   document.querySelector('#submitNames').classList.remove('hidden');
 
