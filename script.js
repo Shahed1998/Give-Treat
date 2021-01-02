@@ -1,14 +1,25 @@
-document.querySelector('#check').addEventListener('click', function () {
-  document.querySelector('#check').textContent = 'Lets begin ✔ ';
-  document.querySelector('#form-fill').classList.remove('hidden');
+const check = document.querySelector('#check');
+const formFill = document.querySelector('#form-fill');
+const clickBtn = document.querySelector('#click');
+const plrNames = document.querySelector('#playerNames');
+const submitNames = document.querySelector('#submitNames');
+const sN = document.querySelector('#sN');
+const result = document.querySelector('#res');
+const number = document.querySelector('#Num');
+
+// -------------------------------------Question Section---------------------------------------------------
+check.addEventListener('click', function () {
+  check.textContent = 'Lets begin ✔ ';
+  formFill.classList.remove('hidden');
 });
 
-document.querySelector('#click').addEventListener('click', function () {
-  let playerNames = document.querySelector('#playerNames');
-  const num = Number(document.querySelector('#Num').value);
+// -------------------------------------Form-fill Section---------------------------------------------------
+clickBtn.addEventListener('click', function () {
+  let playerNames = plrNames;
+  const num = Number(number.value);
 
-  document.querySelector('#click').textContent = 'Clicked 🤩';
-  document.querySelector('#playerNames').classList.remove('hidden');
+  clickBtn.textContent = 'Clicked 🤩';
+  plrNames.classList.remove('hidden');
 
   playerNames.innerHTML = '';
   for (let i = 0; i < num; i++) {
@@ -16,9 +27,9 @@ document.querySelector('#click').addEventListener('click', function () {
       i + 1
     } name" name="form${i + 1}" id="form${i + 1}" class="form"/><br>`;
   }
-  document.querySelector('#submitNames').classList.remove('hidden');
-
-  document.querySelector('#sN').addEventListener('click', function () {
+  submitNames.classList.remove('hidden');
+  // -------------------------------------Submit-names Section---------------------------------------------------
+  sN.addEventListener('click', function () {
     const arr = [];
     for (let i = 0; i < num; i++) {
       const val =
@@ -30,19 +41,18 @@ document.querySelector('#click').addEventListener('click', function () {
     // random player name
     const rand = Math.trunc(Math.random() * newArr.length);
 
-    document.querySelector('#res').innerHTML =
-      newArr[rand] + ' will give treat to all of you 😋';
+    result.innerHTML = newArr[rand] + ' will give treat to all of you 😋';
 
-    document.querySelector('#res').classList.remove('hidden');
+    result.classList.remove('hidden');
   });
 });
 
+// -------------------------------------Reset Section---------------------------------------------------
 document.querySelector('.resetBtn').addEventListener('click', function () {
-  document.querySelector('#form-fill').classList.add('hidden');
-  document.querySelector('#check').innerHTML =
-    ' Want to play a game ?<br /><br />Click me';
-  document.querySelector('#Num').value = '';
-  document.querySelector('#playerNames').classList.add('hidden');
-  document.querySelector('#submitNames').classList.add('hidden');
-  document.querySelector('#res').classList.add('hidden');
+  formFill.classList.add('hidden');
+  check.innerHTML = ' Want to play a game ?<br /><br />Click me';
+  number.value = '';
+  plrNames.classList.add('hidden');
+  submitNames.classList.add('hidden');
+  result.classList.add('hidden');
 });
