@@ -1,3 +1,4 @@
+/* Mobile first design */
 * {
   margin: 0;
   padding: 0;
@@ -101,10 +102,12 @@ body {
   border-bottom: 2px #000 solid;
 }
 
-#reset {
+.resetBtn {
   width: 100%;
-}
-
-#resetBtn {
-  width: inherit;
+  border-left: 2px #000 solid;
+  border-right: 2px #000 solid;
+  border-bottom: 2px #000 solid;
+  border-radius: 0 0 2rem 2rem;
+  background-color: #ff7b54;
+  margin-bottom: 1rem;
 }

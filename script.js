@@ -27,18 +27,22 @@ document.querySelector('#click').addEventListener('click', function () {
     }
     const unrepeatedValue = new Set(arr);
     const newArr = [...unrepeatedValue];
-    console.log(newArr);
     // random player name
     const rand = Math.trunc(Math.random() * newArr.length);
-    console.log(rand);
 
     document.querySelector('#res').innerHTML =
-      'Among ' +
-      newArr +
-      '<br>' +
-      newArr[rand] +
-      ' will give treat to all of you';
+      newArr[rand] + ' will give treat to all of you 😋';
 
     document.querySelector('#res').classList.remove('hidden');
   });
+});
+
+document.querySelector('.resetBtn').addEventListener('click', function () {
+  document.querySelector('#form-fill').classList.add('hidden');
+  document.querySelector('#check').innerHTML =
+    ' Want to play a game ?<br /><br />Click me';
+  document.querySelector('#Num').value = '';
+  document.querySelector('#playerNames').classList.add('hidden');
+  document.querySelector('#submitNames').classList.add('hidden');
+  document.querySelector('#res').classList.add('hidden');
 });
