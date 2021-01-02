@@ -1,3 +1,4 @@
+let game = true;
 const check = document.querySelector('#check');
 const formFill = document.querySelector('#form-fill');
 const clickBtn = document.querySelector('#click');
@@ -30,20 +31,23 @@ clickBtn.addEventListener('click', function () {
   submitNames.classList.remove('hidden');
   // -------------------------------------Submit-names Section---------------------------------------------------
   sN.addEventListener('click', function () {
-    const arr = [];
-    for (let i = 0; i < num; i++) {
-      const val =
-        document.querySelector(`#form${i + 1}`)?.value ?? 'Wrong input';
-      arr.push(val);
+    if (game) {
+      const arr = [];
+      for (let i = 0; i < num; i++) {
+        const val =
+          document.querySelector(`#form${i + 1}`)?.value ?? 'Wrong input';
+        arr.push(val);
+      }
+      const unrepeatedValue = new Set(arr);
+      const newArr = [...unrepeatedValue];
+      // random player name
+      const rand = Math.trunc(Math.random() * newArr.length);
+
+      result.innerHTML = newArr[rand] + ' will give treat to all of you 😋';
+
+      result.classList.remove('hidden');
+      game = false;
     }
-    const unrepeatedValue = new Set(arr);
-    const newArr = [...unrepeatedValue];
-    // random player name
-    const rand = Math.trunc(Math.random() * newArr.length);
-
-    result.innerHTML = newArr[rand] + ' will give treat to all of you 😋';
-
-    result.classList.remove('hidden');
   });
 });
 
@@ -55,4 +59,6 @@ document.querySelector('.resetBtn').addEventListener('click', function () {
   plrNames.classList.add('hidden');
   submitNames.classList.add('hidden');
   result.classList.add('hidden');
+  clickBtn.innerHTML = `<a href="#playerNames" class="ancClick">Click me</a>`;
+  game = true;
 });
