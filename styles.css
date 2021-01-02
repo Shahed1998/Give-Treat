@@ -19,7 +19,6 @@ body {
 .bg {
   width: 90%;
   margin: 0 auto;
-  /* background-color: aqua; */
 }
 
 #Num,
@@ -110,4 +109,25 @@ body {
   border-radius: 0 0 2rem 2rem;
   background-color: #ff7b54;
   margin-bottom: 1rem;
+}
+
+/* Tab size */
+@media only screen and (min-width: 720px) {
+  * {
+    font-size: 130%;
+  }
+  .bg {
+    width: 95%;
+    margin-top: 5rem;
+  }
+}
+
+/* Desktop size */
+@media only screen and (min-width: 1200px) {
+  * {
+    font-size: 110%;
+  }
+  .bg {
+    width: 50%;
+  }
 }

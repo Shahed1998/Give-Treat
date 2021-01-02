@@ -1,4 +1,5 @@
 let game = true;
+let num = 0;
 const check = document.querySelector('#check');
 const formFill = document.querySelector('#form-fill');
 const clickBtn = document.querySelector('#click');
@@ -17,7 +18,7 @@ check.addEventListener('click', function () {
 // -------------------------------------Form-fill Section---------------------------------------------------
 clickBtn.addEventListener('click', function () {
   let playerNames = plrNames;
-  const num = Number(number.value);
+  num = Number(number.value);
 
   clickBtn.textContent = 'Clicked 🤩';
   plrNames.classList.remove('hidden');
@@ -42,7 +43,7 @@ clickBtn.addEventListener('click', function () {
       const newArr = [...unrepeatedValue];
       // random player name
       const rand = Math.trunc(Math.random() * newArr.length);
-
+      console.log(newArr);
       result.innerHTML = newArr[rand] + ' will give treat to all of you 😋';
 
       result.classList.remove('hidden');
@@ -61,4 +62,5 @@ document.querySelector('.resetBtn').addEventListener('click', function () {
   result.classList.add('hidden');
   clickBtn.innerHTML = `<a href="#playerNames" class="ancClick">Click me</a>`;
   game = true;
+  num = 0;
 });
