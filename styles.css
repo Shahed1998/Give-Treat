@@ -67,3 +67,44 @@ body {
 .ancClick {
   text-decoration: none;
 }
+
+/* Player names */
+#playerNames {
+  padding: 2rem;
+  background-color: #ffd56b;
+  border-left: 2px #000 solid;
+  border-right: 2px #000 solid;
+  border-bottom: 2px #000 solid;
+}
+
+#submitNames {
+  padding: 2rem;
+  background-color: #825959;
+  border-left: 2px #000 solid;
+  border-right: 2px #000 solid;
+  border-bottom: 2px #000 solid;
+}
+
+#submitNames #sN {
+  background-color: #fde8cd;
+}
+
+#submitNames .sN {
+  text-decoration: none;
+}
+
+#res {
+  padding: 2rem;
+  background-color: #adce74;
+  border-left: 2px #000 solid;
+  border-right: 2px #000 solid;
+  border-bottom: 2px #000 solid;
+}
+
+#reset {
+  width: 100%;
+}
+
+#resetBtn {
+  width: inherit;
+}

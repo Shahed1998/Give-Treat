@@ -12,9 +12,9 @@ document.querySelector('#click').addEventListener('click', function () {
 
   playerNames.innerHTML = '';
   for (let i = 0; i < num; i++) {
-    playerNames.innerHTML += `<br><input type = "text" placeholder="player Number ${
+    playerNames.innerHTML += `<br><input type = "text" placeholder="player-${
       i + 1
-    }" name="form${i + 1}" id="form${i + 1}" class="form"/><br>`;
+    } name" name="form${i + 1}" id="form${i + 1}" class="form"/><br>`;
   }
   document.querySelector('#submitNames').classList.remove('hidden');
 
@@ -37,7 +37,8 @@ document.querySelector('#click').addEventListener('click', function () {
       newArr +
       '<br>' +
       newArr[rand] +
-      ' will give treat to all of you' +
-      '<hr>';
+      ' will give treat to all of you';
+
+    document.querySelector('#res').classList.remove('hidden');
   });
 });
