@@ -1,3 +1,4 @@
+'use strict';
 let game = true;
 let num = 0;
 const check = document.querySelector('#check');
