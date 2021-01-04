@@ -45,7 +45,12 @@ clickBtn.addEventListener('click', function () {
       // random player name
       const rand = Math.trunc(Math.random() * newArr.length);
       console.log(newArr);
-      result.innerHTML = 'Among '+newArr+'<br/><br/>'+newArr[rand] + ' will give treat to all of you 😋';
+      result.innerHTML =
+        'Among ' +
+        newArr +
+        '<br/><br/>' +
+        newArr[rand] +
+        ' will give treat to all of you 😋';
 
       result.classList.remove('hidden');
       game = false;
