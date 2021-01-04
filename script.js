@@ -38,7 +38,11 @@ clickBtn.addEventListener('click', function () {
       for (let i = 0; i < num; i++) {
         const val =
           document.querySelector(`#form${i + 1}`)?.value ?? 'Wrong input';
-        arr.push(val);
+        let newVal = val.toLowerCase().trim();
+        const fLetter = newVal[0].toUpperCase();
+        const restLetter = newVal.slice(1);
+        newVal = fLetter + restLetter;
+        arr.push(newVal);
       }
       const unrepeatedValue = new Set(arr);
       const newArr = [...unrepeatedValue];
@@ -47,7 +51,7 @@ clickBtn.addEventListener('click', function () {
       console.log(newArr);
       result.innerHTML =
         'Among ' +
-        newArr +
+        newArr.join(' , ') +
         '<br/><br/>' +
         newArr[rand] +
         ' will give treat to all of you 😋';
